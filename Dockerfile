@@ -1,6 +1,6 @@
 FROM docker.io/library/rust:1.75.0 as build
 #RUN rustup target add x86_64-unknown-linux-musl
-#RUN apt -y update && apt -y install musl-tools
+RUN apt -y update && apt -y install musl-tools
 RUN mkdir -p /tmp/build
 WORKDIR /tmp/build
 RUN git clone https://github.com/richfelker/musl-cross-make
